@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PodcastEpisodeStructuredSummary",
+  "type": "object",
+  "properties": {
+    "key_takeaways": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 3,
+      "maxItems": 5,
+      "uniqueItems": true
+    },
+    "clinical_insight": { "type": "string" },
+    "actionable_takeaway": { "type": "string" },
+    "references": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 0
+    },
+    "summary": { "type": "string" },
+    "limitations": { "type": ["string", "null"] }
+  },
+  "required": ["key_takeaways", "clinical_insight", "actionable_takeaway", "references", "summary"],
+  "additionalProperties": false
+}
